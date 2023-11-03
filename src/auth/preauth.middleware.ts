@@ -7,7 +7,7 @@ dotenv.config();
 const firebase_params = {
     type: process.env.type,
     projectId: process.env.project_id,
-    privateKeyId: process.env.private_key_id,
+    privateKeyId: process.env.private_key_id.replace(/\\n/gm, "\n"),
     privateKey: process.env.private_key,
     clientEmail: process.env.client_email,
     clientId: process.env.client_id,
